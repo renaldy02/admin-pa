@@ -16,7 +16,13 @@ Route::get('logout', 'Auth\LoginController@logout');
 Auth::routes();
 // chats
 Route::get('restaurant', 'datarestaurantcontroller@view');
+Route::get('tambah-restaurant', 'datarestaurantcontroller@tambah_restaurant');
+Route::post('simpan-restaurant', 'datarestaurantcontroller@simpanrestaurant');
 Route::get('hotel', 'datahotelcontroller@view');
+Route::get('tambah-hotel', 'datahotelcontroller@viewtambah');
+Route::post('simpan-hotel', 'datahotelcontroller@simpanhotel');
+Route::get('karyawan', 'datakaryawancontroller@view');
+Route::get('tambah-karyawan', 'datakaryawancontroller@tambahkaryawan');
 Route::get('transaksi', 'transaksicontroller@view');
 Route::get('/chat', 'ChatsController@index');
 Route::get('messages', 'ChatsController@fetchMessages');

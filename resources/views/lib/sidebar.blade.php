@@ -82,11 +82,11 @@
 											</span>
                         </li>
                         <li class="m-menu__item  m-menu__item--submenu @yield('data-user')" aria-haspopup="true" m-menu-submenu-toggle="hover">
-                            <a href="{{url('/manajemen-user/user')}}" class="m-menu__link m-menu__toggle">
+                            <a href="{{url('karyawan')}}" class="m-menu__link m-menu__toggle">
                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot">
                                     <span></span>
                                 </i>
-                                <span class="m-menu__link-text">Data karyawan</span>
+                                <span class="m-menu__link-text">datakaryawan</span>
                             </a>
                         </li>
                         <li class="m-menu__item  m-menu__item--submenu @yield('data-user')" aria-haspopup="true" m-menu-submenu-toggle="hover">

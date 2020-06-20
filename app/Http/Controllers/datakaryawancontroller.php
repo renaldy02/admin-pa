@@ -8,6 +8,10 @@ class datakaryawancontroller extends Controller
 {
     public function view ()
     {
-        return view("pages.data_karyawan");
+        return view("pages.datakaryawan");
+    }
+    public function tambahkaryawan()
+    {
+        return view("pages.tambahkaryawan");
     }
 }

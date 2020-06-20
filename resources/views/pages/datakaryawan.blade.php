@@ -12,7 +12,7 @@ m-menu__item--active
     <div class="m-subheader ">
         <div class="d-flex align-items-center">
             <div class="mr-auto">
-                <h3 class="m-subheader__title m-subheader__title--separator">Data hotel</h3>
+                <h3 class="m-subheader__title m-subheader__title--separator">Data karyawan</h3>
                 {{--<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">--}}
                 {{--<li class="m-nav__item m-nav__item--home">--}}
                 {{--<a href="#" class="m-nav__link m-nav__link--icon">--}}
@@ -114,17 +114,17 @@ m-menu__item--active
                 <div class="m-portlet__head-caption">
                     <div class="m-portlet__head-title">
                         <h3 class="m-portlet__head-text">
-                            hotel
+                            karyawan
                         </h3>
                     </div>
                 </div>
                 <div class="m-portlet__head-tools">
                     <ul class="m-portlet__nav">
                         <li class="m-portlet__nav-item">
-                        <a href="{{url("tambah-hotel")}}" class="btn btn-primary m-btn m-btn--custom m-btn--icon m-btn--air">
+                        <a href="{{url("tambah-karyawan")}}" class="btn btn-primary m-btn m-btn--custom m-btn--icon m-btn--air">
                                 <span>
                                     <i class="la la-cart-plus"></i>
-                                    <span>Tambah Hotel</span>
+                                    <span>Tambah karyawan</span>
                                 </span>
                             </a>
                         </li>
