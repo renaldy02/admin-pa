@@ -9,8 +9,10 @@ use App\Model\JsonStatus;
 class datarestaurantcontroller extends Controller
 {
     public function view ()
-    {
-        return view("pages.data_restaurant");
+    { 
+        $data = restaurant::select('*')->get();
+        return view("pages.data_restaurant")->with('data', $data);
+
     }
     public function tambah_restaurant()
     {

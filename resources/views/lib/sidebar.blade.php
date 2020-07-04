@@ -90,7 +90,7 @@
                             </a>
                         </li>
                         <li class="m-menu__item  m-menu__item--submenu @yield('data-user')" aria-haspopup="true" m-menu-submenu-toggle="hover">
-                            <a href="{{url('/manajemen-user/logs')}}" class="m-menu__link m-menu__toggle">
+                            <a href="{{url('absensi')}}" class="m-menu__link m-menu__toggle">
                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot">
                                     <span></span>
                                 </i>

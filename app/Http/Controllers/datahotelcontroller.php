@@ -10,7 +10,9 @@ class datahotelcontroller extends Controller
 {
     public function view ()
     {
-        return view("pages.data_hotel");
+        $data = hotel::select('*')->get();
+        //dd($data[0]->nama);
+        return view("pages.data_hotel")->with('data', $data);
     }
     public function viewtambah()
     {

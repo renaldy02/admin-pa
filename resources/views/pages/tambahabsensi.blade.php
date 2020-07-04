@@ -9,7 +9,7 @@
         <div class="m-subheader ">
             <div class="d-flex align-items-center">
                 <div class="mr-auto">
-                    <h3 class="m-subheader__title ">tambah karyawan</h3>
+                    <h3 class="m-subheader__title ">tambah absensi</h3>
                 </div>
                 <div>
 								<span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
@@ -41,7 +41,7 @@
                                 <div class="m-portlet__head-caption">
                                     <div class="m-portlet__head-title">
                                         <h3 class="m-portlet__head-text">
-                                            tambah karyawan
+                                            tambah absensi
                                         </h3>
                                     </div>
                                 </div>
@@ -78,50 +78,41 @@
                                                 </div>
                                                 <div class="form-group m-form__group row">
                                                     <div class="col-lg-12">
-                                                        <label class="form-control-label">* Name karyawan:</label>
-                                                        <input type="teks" name="nama"
+                                                        <label class="form-control-label">* pilih karyawan:</label>
+                                                        <select name="karyawan_id"
+                                                               class="form-control m-input">
+                                                               @foreach ($data as $item)
+                                                    <option value="{{$item->id}}">{{$item->nama}}</option>
+                                                               @endforeach
+                                                               <option value=""></option>
+                                                        </select>
+                                                        <span class="m-form__help">Please enter your Name to your dashboard</span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group m-form__group row">
+                                                    <div class="col-lg-12">
+                                                        <label class="form-control-label">* tanggal masuk:</label>
+                                                        <input type="date" name="tanggal"
                                                                class="form-control m-input" placeholder="">
                                                         <span class="m-form__help">Please enter your Name to your dashboard</span>
                                                     </div>
                                                 </div>
                                                 <div class="form-group m-form__group row">
                                                     <div class="col-lg-12">
-                                                        <label class="form-control-label">* alamat:</label>
-                                                        <input type="teks" name="alamat"
+                                                        <label class="form-control-label">* jam masuk:</label>
+                                                        <input type="time" name="jam_masuk"
                                                                class="form-control m-input" placeholder="">
                                                         <span class="m-form__help">Please enter your Name to your dashboard</span>
                                                     </div>
                                                 </div>
                                                 <div class="form-group m-form__group row">
                                                     <div class="col-lg-12">
-                                                        <label class="form-control-label">* tanggal bergabung:</label>
-                                                        <input type="date" name="tanggal_bergabung"
+                                                        <label class="form-control-label">* jam pulang:</label>
+                                                        <input type="time" name="jam_pulang"
                                                                class="form-control m-input" placeholder="">
                                                         <span class="m-form__help">Please enter your Name to your dashboard</span>
                                                     </div>
-                                                </div>
-                                                <div class="form-group m-form__group row">
-                                                    <div class="col-lg-12">
-                                                        <label class="form-control-label">* status karyawan:</label>
-                                                        <input type="teks" name="status_karyawan"
-                                                               class="form-control m-input" placeholder="">
-                                                        <span class="m-form__help">Please enter your Name to your dashboard</span>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group m-form__group row">
-                                                    <div class="col-lg-6 m-form__group-sub">
-                                                        <label class="form-control-label">* ktp:</label>
-                                                        <input type="teks" name="ktp"
-                                                               class="form-control m-input" placeholder="" required>
-                                                        <span class="m-form__help">Your Email to login to your dashboard</span>
-                                                    </div>
-                                                    <div class="col-lg-6 m-form__group-sub">
-                                                        <label class="form-control-label">* foto:</label>
-                                                        <input type="file" name="gambar"
-                                                               class="form-control m-input" placeholder="">
-                                                        <span class="m-form__help">Please use letters and at least one number and symbol</span>
-                                                    </div>
-                                                </div>
+                                                </div>   
                                             </div>
                                             <div class="m-separator m-separator--dashed m-separator--lg"></div>
                                            
@@ -171,11 +162,10 @@
                 });
 
                 //File data
-                var file_data =  $('input[type=file]')[0].files[0];
-                data.append("gambar", file_data);
+               
             
                 $.ajax({
-                    url: "{{url('simpan-karyawan')}}",
+                    url: "{{url('simpan-absensi')}}",
                     type: "post",
                     processData: false,
                     contentType: false,

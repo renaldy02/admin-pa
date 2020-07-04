@@ -12,7 +12,7 @@ m-menu__item--active
     <div class="m-subheader ">
         <div class="d-flex align-items-center">
             <div class="mr-auto">
-                <h3 class="m-subheader__title m-subheader__title--separator">Data karyawan</h3>
+                <h3 class="m-subheader__title m-subheader__title--separator">Data absensi</h3>
                 {{--<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">--}}
                 {{--<li class="m-nav__item m-nav__item--home">--}}
                 {{--<a href="#" class="m-nav__link m-nav__link--icon">--}}
@@ -114,17 +114,17 @@ m-menu__item--active
                 <div class="m-portlet__head-caption">
                     <div class="m-portlet__head-title">
                         <h3 class="m-portlet__head-text">
-                            karyawan
+                            absensi
                         </h3>
                     </div>
                 </div>
                 <div class="m-portlet__head-tools">
                     <ul class="m-portlet__nav">
                         <li class="m-portlet__nav-item">
-                        <a href="{{url("tambah-karyawan")}}" class="btn btn-primary m-btn m-btn--custom m-btn--icon m-btn--air">
+                        <a href="{{url("tambah-absensi")}}" class="btn btn-primary m-btn m-btn--custom m-btn--icon m-btn--air">
                                 <span>
                                     <i class="la la-cart-plus"></i>
-                                    <span>Tambah karyawan</span>
+                                    <span>Tambah absensi</span>
                                 </span>
                             </a>
                         </li>
@@ -140,14 +140,12 @@ m-menu__item--active
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Nama</th>
-                            <th>Alamat</th>
-                            <th>Tanggal_bergabung</th>
-                            <th>Status_karyawan</th>
-                            <th>Gambar</th>
+                            <th>Nama Karyawan</th>
+                            <th>Tanggal</th>
+                            <th>Jam_masuk</th>
+                            <th>jam_pulang</th>
                             <th>Created At</th>
                             <th>Updated At</th>
-                            <th>Ktp</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -155,13 +153,11 @@ m-menu__item--active
                         <tr>
                             <th>{{1}}</th>
                             <th>{{$item->nama}}</th>
-                            <th>{{$item->alamat}}</th>
-                            <th>{{$item->tanggal_bergabung}}</th>
-                            <th>{{$item->status_karyawan}}</th>
-                            <th><img style="width: 55px;" src="{{$item->gambar}}"></th>
+                            <th>{{$item->tanggal}}</th>
+                            <th>{{$item->jam_masuk}}</th>
+                            <th>{{$item->jam_pulang}}</th>
                             <th>{{$item->created_at}}</th>
                             <th>{{$item->updated_at}}</th>
-                            <th>{{$item->ktp}}</th>
                         </tr>
                         @endforeach
                     </tbody>

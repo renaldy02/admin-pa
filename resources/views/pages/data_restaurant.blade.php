@@ -184,19 +184,28 @@
                 <div class="m-portlet__body">
 
                     <!--begin: Datatable -->
-                    <table class="table table-striped- table-bordered table-hover table-checkable" id="users">
+                    <table class="table table-striped- table-bordered table-hover table-checkable" >
                         <thead>
                         <tr>
                             <th>ID</th>
                             <th>Nama</th>
-                            <th>Email</th>
-                            <th>Role</th>
+                            <th>Harga</th>
+                            <th>Gambar</th>
                             <th>Created At</th>
                             <th>Updated At</th>
                         </tr>
                         </thead>
                         <tbody>
-
+                            @foreach($data as $item)
+                            <tr>
+                                <th>{{1}}</th>
+                                <th>{{$item->nama}}</th>
+                                <th>{{$item->harga}}</th>
+                                <th><img style="width: 55px;" src="{{$item->gambar}}"></th>
+                                <th>{{$item->created_at}}</th>
+                                <th>{{$item->updated_at}}</th>
+                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
