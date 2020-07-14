@@ -134,14 +134,35 @@
                         <tr>
                             <th>ID</th>
                             <th>Nama</th>
-                            <th>Email</th>
-                            <th>Role</th>
+                            <th>Nomor_telepon</th>
+                            <th>alamat</th>
+                            <th>harga</th>
+                            <th>quantity</th>
+                            <th>total_harga</th>
+                            <th>tanggal_pemesanan</th>
+                            <th>type_produk</th>
+                            <th>kode_produk</th>
                             <th>Created At</th>
                             <th>Updated At</th>
                         </tr>
                         </thead>
                         <tbody>
-
+                            @foreach($data as $item)
+                            <tr>
+                                <th>{{1}}</th>
+                                <th>{{$item->nama}}</th>
+                                <th>{{$item->alamat}}</th>
+                                <th>{{$item->Nomor_telepon}}</th>
+                                <th>{{$item->harga}}</th>
+                                <th>{{$item->quantity}}</th>
+                                <th>{{$item->total_harga}}</th>
+                                <th>{{$item->tanggal_pemesanan}}</th>
+                                <th>{{$item->type_produk}}</th>
+                                <th>{{$item->kode_produk}}</th>
+                                <th>{{$item->created_at}}</th>
+                                <th>{{$item->updated_at}}</th>
+                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

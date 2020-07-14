@@ -55,6 +55,21 @@
                                 <span class="m-menu__link-text">Data Hotel</span>
                             </a>
                         </li>
+                        <li class="m-menu__item  m-menu__item--submenu @yield('data-wahana')" aria-haspopup="true" m-menu-submenu-toggle="hover">
+                            <a href="{{url('wahana')}}" class="m-menu__link m-menu__toggle">
+                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                    <span></span>
+                                </i>
+                                <span class="m-menu__link-text">Data Wahana</span>
+                            </a>
+                        </li>
+                        <li class="m-menu__item  m-menu__item--submenu @yield('data-user')" aria-haspopup="true" m-menu-submenu-toggle="hover">
+                            <a href="{{url('tiket_wisata')}}" class="m-menu__link m-menu__toggle">
+                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                    <span></span>
+                                </i>
+                                <span class="m-menu__link-text">tiket wisata</span>
+                            </a>
                         <li class="m-menu__item  m-menu__item--submenu @yield('data-user')" aria-haspopup="true" m-menu-submenu-toggle="hover">
                             <a href="{{url('restaurant')}}" class="m-menu__link m-menu__toggle">
                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot">

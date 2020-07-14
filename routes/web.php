@@ -16,6 +16,12 @@ Route::get('logout', 'Auth\LoginController@logout');
 Auth::routes();
 // chats
 Route::get('restaurant', 'datarestaurantcontroller@view');
+Route::get('tiket_wisata', 'tiketwisata@view');
+Route::get('tambah_tiket', 'tiketwisata@tambahtiket');
+Route::post('simpan_tiket', 'tiketwisata@simpantiket');
+Route::get('wahana', 'wahanacontroller@view');
+Route::get('tambah-wahana', 'wahanacontroller@tambahwahana');
+Route::post('simpan_wahana', 'wahanacontroller@simpanwahana');
 Route::get('absensi', 'dataabsensi@view');
 Route::post('simpan-absensi', 'dataabsensi@simpanabsensi');
 Route::get('tambah-absensi', 'dataabsensi@tambahabsensi');
