@@ -145,7 +145,8 @@ m-menu__item--active
                             <th>Rating</th>
                             <th>Gambar</th>
                             <th>Created At</th>
-                            <th>Updated At</th>
+                            <th>Action</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -157,7 +158,7 @@ m-menu__item--active
                             <th>{{$item->rating}}</th>
                             <th><img style="width: 55px;" src="{{$item->gambar}}"></th>
                             <th>{{$item->created_at}}</th>
-                            <th>{{$item->updated_at}}</th>
+                        <th><a href="{{url('hotel/hapus/'.$item->id)}}"><button class="btn btn-danger btn-xs">Hapus</button></a></th>
                         </tr>
                         @endforeach
                     </tbody>

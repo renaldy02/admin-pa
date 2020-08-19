@@ -28,4 +28,9 @@ class datarestaurantcontroller extends Controller
         //dd($simpan,$model);
         return JsonStatus::messagewithurl(200,"Berhasil di simpan","/restaurant");
     }
+    public function hapus(Request $request)
+    {
+        $data  = restaurant::where('id', $request->id)->delete();
+        return redirect('restaurant');
+    }
 }

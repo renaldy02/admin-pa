@@ -162,6 +162,7 @@ m-menu__item--active
                             <th>{{$item->created_at}}</th>
                             <th>{{$item->updated_at}}</th>
                             <th>{{$item->ktp}}</th>
+                            <th><a href="{{url('karyawan/hapus/'.$item->id)}}"><button class="btn btn-danger btn-xs">Hapus</button></a></th>
                         </tr>
                         @endforeach
                     </tbody>

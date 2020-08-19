@@ -17,7 +17,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- begin::Head -->
 <head>
     <meta charset="utf-8" />
-    <title>Laratoric | Login Page</title>
+    <title>Sistem informasi topejawa | Login Page</title>
     <meta name="description" content="Latest updates and statistic charts">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
 
@@ -45,7 +45,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <!--RTL version:<link href="../../../assets/demo/default/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
 
     <!--end::Base Styles -->
-    <link rel="shortcut icon" href="{{asset('assets/demo/default/media/img/logo/favicon.ico')}}" />
+    <link rel="shortcut icon" href="{{asset('files/icon/topjeawa.png')}}" />
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -77,11 +77,11 @@ License: You must have a valid license purchased only from themeforest(the above
                     <div class="m-login__content">
                         <div class="m-login__logo">
                             <a href="#">
-                                <img src="{{asset('assets/app/media/img/logos/logo-2.png')}}">
+                                <img src="{{asset('files/icon/topejawa.png')}}" style="width: 300px">
                             </a>
                         </div>
                         <div class="m-login__title">
-                            <h3>JOIN OUR GREAT METRO COMMUNITY GET FREE ACCOUNT</h3>
+                            <h3>TopeJawa Admin System</h3>
                         </div>
                         <div class="m-login__desc">
                             Amazing Stuff is Lorem Here.Grownng Team

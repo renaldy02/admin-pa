@@ -28,4 +28,9 @@ class tiketwisata extends Controller
         //dd($simpan,$model);
         return JsonStatus::messagewithurl(200,"Berhasil di simpan","/tiket_wisata");
     }
+    public function hapus(Request $request)
+    {
+        $data  = tiket_wisata::where('id', $request->id)->delete();
+        return redirect('tiket_wisata');    
+    }
 }

@@ -17,6 +17,11 @@ class datakaryawancontroller extends Controller
     {
         return view("pages.tambahkaryawan");
     }
+    public function hapus(Request $request)
+    {
+        $data  = karyawan::where('id', $request->id)->delete();
+        return redirect('karyawan');
+    }
     public function simpankaryawan(Request $request)
     {
         $name = rand(100000,900000);

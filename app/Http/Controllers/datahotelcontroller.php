@@ -14,10 +14,18 @@ class datahotelcontroller extends Controller
         //dd($data[0]->nama);
         return view("pages.data_hotel")->with('data', $data);
     }
+
     public function viewtambah()
     {
         return view("pages.tambahhotel");
     }
+
+    public function hapus(Request $request)
+    {
+        $data  = hotel::where('id', $request->id)->delete();
+        return redirect('hotel');
+    }
+
     public function simpanhotel(Request $request)
     {
         $name = rand(100000,900000);
